@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .header {
+  width: 25px;
+  background-color: black;
+  min-height: 100vh;
+}
+
+body .body {
+  width: 90%;
+  background-color: blanchedalmond;
+}
+/*# sourceMappingURL=index.css.map */
