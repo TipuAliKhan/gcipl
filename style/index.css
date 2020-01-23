@@ -1,22 +1,162 @@
 body {
+  width: 100vw;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: row;
+}
+
+body p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+body h1 {
+  font-size: 65px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+@media (max-width: 550px) {
+  body h1 {
+    font-size: 30px;
+  }
+}
+
+body a {
+  color: #222222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body .flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+body .flex-row {
+  display: flex;
+}
+
+body .imgOverlay {
+  background-color: rgba(19, 19, 11, 0.64);
+  width: 100%;
+  height: 100%;
+}
+
+body .bgimg {
+  height: 100%;
+  background-origin: border-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .thmbtn {
+  background-color: transparent;
+  color: #ffff;
+  font-size: 15px;
+  outline: none;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid #ffff;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 140px;
+  text-align: center;
 }
 
 body .header {
-  width: 25px;
+  width: 30px;
   background-color: black;
   min-height: 100vh;
 }
 
-body .body {
-  width: 90%;
-  background-color: blanchedalmond;
+body .header nav .hm-icon {
+  color: #ffff;
+  height: 100vh;
 }
-/*# sourceMappingURL=index.css.map */
+
+body .header nav .hm-icon .dots,
+body .header nav .hm-icon .close {
+  height: 100vh;
+  cursor: pointer;
+}
+
+body .header nav .hm-icon .close {
+  display: none;
+}
+
+body .header nav .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  margin-left: 30px;
+}
+
+body .header nav .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #423d3d;
+  display: block;
+  transition: 0.3s;
+}
+
+body .header nav .sidenav a:hover {
+  color: #302828;
+}
+
+@media screen and (max-height: 450px) {
+  body .header .sidenav {
+    padding-top: 15px;
+  }
+  body .header .sidenav a {
+    font-size: 18px;
+  }
+}
+
+body .body {
+  width: calc(100% - 30px);
+}
+
+body .body .banner {
+  height: 80vh;
+  color: #ffff;
+}
+
+body .body .banner .ban-content {
+  width: 60%;
+}
+
+body .body .banner .ban-content h1 {
+  margin-bottom: 2%;
+}
+
+@media (max-width: 550px) {
+  body .body .banner .ban-content .grp-btn {
+    flex-direction: column;
+  }
+}
+
+body .body .banner .ban-content .thmbtn {
+  margin-right: 15px;
+  margin-top: 2%;
+}
+
+body .body .banner .ban-content .thmbtn a {
+  color: #ffff;
+}
+
+body .body .about {
+  width: 100%;
+}
