@@ -1,11 +1,14 @@
 body {
+  font-family: "Playfair Display", "sans-serif";
   width: 100vw;
   margin: 0;
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
 }
 
 body p {
+  font-family: "Poppins", "sans-serif";
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
@@ -22,10 +25,22 @@ body h1 {
   }
 }
 
+body h2 {
+  font-size: 40px;
+}
+
+@media (max-width: 550px) {
+  body h2 {
+    font-size: 22px;
+  }
+}
+
 body a {
-  color: #222222;
+  font-family: "Poppins", "sans-serif";
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 600;
 }
 
 body .flex-col-center {
@@ -56,22 +71,28 @@ body .bgimg {
 
 body .thmbtn {
   background-color: transparent;
-  color: #ffff;
+  color: #000000;
   font-size: 15px;
   outline: none;
   padding: 10px 18px;
   text-transform: uppercase;
   font-weight: 400;
-  border: 1px solid #ffff;
+  border: 1px solid #000000;
   border-radius: 2px;
   cursor: pointer;
   min-width: 140px;
   text-align: center;
+  margin-top: 40px;
+}
+
+body .overflow-hide {
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body .header {
   width: 30px;
-  background-color: black;
+  background-color: #000000;
   min-height: 100vh;
 }
 
@@ -84,6 +105,8 @@ body .header nav .hm-icon .dots,
 body .header nav .hm-icon .close {
   height: 100vh;
   cursor: pointer;
+  position: fixed;
+  padding-left: 8px;
 }
 
 body .header nav .hm-icon .close {
@@ -151,6 +174,8 @@ body .body .banner .ban-content h1 {
 body .body .banner .ban-content .thmbtn {
   margin-right: 15px;
   margin-top: 2%;
+  color: #ffff;
+  border: 1px solid #ffff;
 }
 
 body .body .banner .ban-content .thmbtn a {
@@ -159,4 +184,97 @@ body .body .banner .ban-content .thmbtn a {
 
 body .body .about {
   width: 100%;
+  padding: 0% 3%;
+}
+
+body .body .about div:first-child {
+  width: 65%;
+  margin: 0 auto;
+}
+
+body .body .about .thmbtn {
+  max-width: 145px;
+}
+
+body .body .projects {
+  padding: 0% 3%;
+}
+
+body .body .projects .img-container {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  body .body .projects .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body .body .projects img {
+  height: 300px;
+  width: 30%;
+  margin: 0px 10px 10px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .body .projects img {
+    width: 60%;
+  }
+}
+
+body .body .clients {
+  padding: 3%;
+}
+
+body .body .clients .img-container {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  body .body .clients .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body .body .clients img {
+  width: 150px;
+  margin: 0px 25px 30px 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .body .clients img {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+}
+
+body .body .services {
+  height: 300px;
+  color: #ffff;
+}
+
+body .body .services .imgOverlay .menu {
+  height: 100px;
+  padding: 0px 40px;
+  border-top: 0.5px solid #fff;
+  display: flex;
+}
+
+body .body .services .imgOverlay .menu div {
+  padding: 20px 30px;
+  margin-top: 10px;
+  font-size: 2em;
+  width: 220px;
+}
+
+body .body .services .imgOverlay .menu a {
+  color: #ffffff;
+}
+
+body .body .services .imgOverlay .menu p {
+  width: 50%;
+  text-align: right;
+  line-height: 100px;
 }
