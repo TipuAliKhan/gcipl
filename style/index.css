@@ -14,7 +14,7 @@ body p {
 }
 
 body h1 {
-  font-size: 65px;
+  font-size: 55px;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
@@ -26,7 +26,7 @@ body h1 {
 }
 
 body h2 {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 @media (max-width: 550px) {
@@ -40,7 +40,13 @@ body a {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body .flex-col-center {
@@ -107,6 +113,7 @@ body .header nav .hm-icon .close {
   cursor: pointer;
   position: fixed;
   padding-left: 8px;
+  line-height: 15px;
 }
 
 body .header nav .hm-icon .close {
@@ -133,10 +140,15 @@ body .header nav .sidenav a {
   color: #423d3d;
   display: block;
   transition: 0.3s;
+  transition: ease-out;
 }
 
 body .header nav .sidenav a:hover {
   color: #302828;
+}
+
+body .header nav .sidenav a img {
+  width: 90%;
 }
 
 @media screen and (max-height: 450px) {
@@ -153,12 +165,12 @@ body .body {
 }
 
 body .body .banner {
-  height: 80vh;
+  height: 100vh;
   color: #ffff;
 }
 
 body .body .banner .ban-content {
-  width: 60%;
+  width: 65%;
 }
 
 body .body .banner .ban-content h1 {
@@ -188,7 +200,7 @@ body .body .about {
 }
 
 body .body .about div:first-child {
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -263,10 +275,12 @@ body .body .services .imgOverlay .menu {
 }
 
 body .body .services .imgOverlay .menu div {
-  padding: 20px 30px;
-  margin-top: 10px;
-  font-size: 2em;
+  font-size: x-large;
   width: 220px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 body .body .services .imgOverlay .menu a {
@@ -276,5 +290,45 @@ body .body .services .imgOverlay .menu a {
 body .body .services .imgOverlay .menu p {
   width: 50%;
   text-align: right;
-  line-height: 100px;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+
+body .body .services .imgOverlay .menu:hover {
+  background-color: rgba(19, 19, 11, 0.84);
+}
+
+body .body .services .imgOverlay .menu:hover p {
+  display: flex;
+}
+
+body .body .footer {
+  padding: 3%;
+  flex-wrap: wrap;
+}
+
+body .body .footer img {
+  width: 200px;
+}
+
+body .body .footer p {
+  line-height: 20px;
+}
+
+body .body .footer div,
+body .body .footer ul {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+
+body .body .foot-end {
+  text-align: center;
+  background: #f6f6f6;
+  padding: 5px;
 }

@@ -11,7 +11,7 @@ body {
     margin-block-end: 0em;
   }
   h1 {
-    font-size: 65px;
+    font-size: 55px;
     margin-block-start: 0em;
     margin-block-end: 0em;
     @media (max-width: 550px) {
@@ -19,7 +19,7 @@ body {
     }
   }
   h2 {
-    font-size: 40px;
+    font-size: 35px;
     @media (max-width: 550px) {
       font-size: 22px;
     }
@@ -29,9 +29,13 @@ body {
     color: #000000;
     text-decoration: none;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 400;
   }
-
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   .flex-col-center {
     display: flex;
     flex-direction: column;
@@ -87,6 +91,7 @@ body {
           cursor: pointer;
           position: fixed;
           padding-left: 8px;
+          line-height: 15px;
         }
         .close {
           display: none;
@@ -113,6 +118,10 @@ body {
           &:hover {
             color: #302828;
           }
+          img {
+            width: 90%;
+          }
+          transition: ease-out;
         }
       }
     }
@@ -128,10 +137,10 @@ body {
   .body {
     width: calc(100% - 30px);
     .banner {
-      height: 80vh;
+      height: 100vh;
       color: #ffff;
       .ban-content {
-        width: 60%;
+        width: 65%;
         h1 {
           margin-bottom: 2%;
         }
@@ -156,7 +165,7 @@ body {
       padding: 0% 3%;
       div {
         &:first-child {
-          width: 65%;
+          width: 70%;
           margin: 0 auto;
         }
       }
@@ -210,10 +219,12 @@ body {
           border-top: 0.5px solid #fff;
           display: flex;
           div {
-            padding: 20px 30px;
-            margin-top: 10px;
-            font-size: 2em;
+            font-size: x-large;
             width: 220px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
           }
           a {
             color: #ffffff;
@@ -221,11 +232,44 @@ body {
           p {
             width: 50%;
             text-align: right;
-            line-height: 100px;
-            // display: ;
+            font-size: small;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            display: none;
+          }
+          &:hover {
+            background-color: rgba(19, 19, 11, 0.84);
+            p {
+              display: flex;
+            }
           }
         }
       }
+    }
+    .footer {
+      padding: 3%;
+      flex-wrap: wrap;
+      img {
+        width: 200px;
+      }
+      p {
+        // width: 250px;
+        line-height: 20px;
+      }
+      div,
+      ul {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 10%;
+      }
+    }
+    .foot-end {
+      text-align: center;
+      background: #f6f6f6;
+      padding: 5px;
     }
   }
 }
